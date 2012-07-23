@@ -1,9 +1,6 @@
 class Validator
-
-  def initialize(number,input)
-    @number = number
-    @input = input
-  end
+  attr_accessor :number
+  attr_accessor :input
 
   def verf
     all = (@input & @number).size

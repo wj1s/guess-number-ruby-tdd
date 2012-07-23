@@ -12,6 +12,13 @@ class NumberCreater
     return res
   end
 
+  def tranNumberToArray number
+    res = []
+    res.push 0 if number < 1000
+    number.to_s.each_char {|x| res.push x.to_i}
+    return res
+  end
+
   private
   def checkNoDup arr
     return arr.uniq.size == arr.size
@@ -24,10 +31,4 @@ class NumberCreater
     return res
   end
 
-  def tranNumberToArray number
-    res = []
-    res.push 0 if number < 1000
-    number.to_s.each_char {|x| res.push x.to_i}
-    return res
-  end
 end
