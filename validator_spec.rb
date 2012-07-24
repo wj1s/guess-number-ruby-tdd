@@ -35,4 +35,5 @@ describe Validator do
     val.input = [4,2,3,1]
     val.verf().should == "2A2B"
   end
+
 end
